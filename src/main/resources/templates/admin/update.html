@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>user-update</title>
+    <title>User update</title>
+
 </head>
 <body>
 <form action="#" th:action="@{/admin/update}" th:object="${user}"
@@ -14,7 +15,7 @@
     <br/>
     <br/>
     <label for="name">Name</label>
-    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+    <input type="text" th:field="*{username}" id="name" placeholder="Name">
     <br/>
     <br/>
     <label for="lastName">Last Name</label>

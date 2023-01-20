@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>user-create</title>
+    <title>User create</title>
 </head>
 <body>
 <form action="#" th:action="@{/admin/create}" th:object="${user}"
       method="post" style="max-width: 600px; margin: 0 auto;">
     <h2>Новый пользователь</h2>
     <label for="name">Name</label>
-    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+    <input type="text" th:field="*{username}" id="name" placeholder="Name">
     <br/>
     <br/>
     <label for="lastName">Last Name</label>
