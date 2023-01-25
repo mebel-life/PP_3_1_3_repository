@@ -64,15 +64,15 @@ public class UserService implements UserDetailsService {
       if (user == null) {
          throw new UsernameNotFoundException("User not found");
       }
-      return new org.springframework.security.core.userdetails.User(user.getUsername(),user.getPassword(),user.getRoles());
+      return user;
    }
 
-   @Transactional
+   @Transactional(readOnly = true)
    public User findByUsername(String username) {
       return userRepository.findByUsername(username);
    }
 
-   @Transactional
+   @Transactional(readOnly = true)
    public List<Role> listRoles() {
       return roleRepository.findAll();
    }
